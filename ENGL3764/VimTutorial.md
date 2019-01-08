@@ -170,23 +170,25 @@ entire file in a Visual block.
 
 ## Breaking Down A Complex Action (Paragraphs)
 
-This command looks complex and impossible to memorise however very rarely will
-anyone recite a specific action like this. This would instead form naturally
-like a person describing the action. This command converts a list of vim-plug
-plugin entries into a Markdown list of links to the Github pages of each plugin.
-I selected this example to show that with practice Vim command composition
-becomes like a second language as this was a command that I performed while
-creating this tutorial.  Look at the demonstration below and then see how
-similar the description is to the command above.
+This command converts a list of vim-plug plugin entries into a Markdown list of
+links to the Github pages of each plugin. I selected this example as this was a
+command that I performed while creating this tutorial and to show that with
+practice Vim command composition becomes like a second language.
 
 ```
 qaciw-<Esc>wcs']wyi]A(https://github.com/<Esc>pA)<Esc>j^q6@a
 ```
 
+This command looks complex and impossible to memorise however very rarely will
+anyone recite a specific action like this. This would instead form naturally
+like a person describing the action. Look at the demonstration and description 
+below and observe how with some slight annotation the command above reads 
+like natural language.
+
 ![plugins](https://jacoblambda.github.io/jacoblambda/ENGL3764/plugins.svg)
 
 ```
-[q] Record actions to
+[q] Record all following actions to
 [a] register a.
 [c] Change the
 [i] inner
@@ -214,12 +216,13 @@ qaciw-<Esc>wcs']wyi]A(https://github.com/<Esc>pA)<Esc>j^q6@a
 ```
 Without the line by line it looks like this. 
 
-Record actions to register a. Change the inner word to "-" and return to normal
-mode. Go to the start of the next word. Change surrounding single quotes to brackets
-(without padding). Go to the start of the next word. Yank (copy) everything within inner
-brackets. Append (to the end of the line with insert mode) `(https://github.com/` 
-and return to normal mode. Go down one line. Go to the start of the line. End 
-recording. For 6 times, run the recording in register a.
+Record all following actions to register a. Change the inner word to `-` and
+return to normal mode. Go to the start of the next word. Change surrounding
+single quotes to brackets (without padding). Go to the start of the next word.
+Yank (copy) everything within inner brackets. Append (to the end of the line
+with insert mode) `(https://github.com/` and return to normal mode. Go down one
+line. Go to the start of the line. End recording. For 6 times, run the
+recording in register a.
 
 ## From Here
 
