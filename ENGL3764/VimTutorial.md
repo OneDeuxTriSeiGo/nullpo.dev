@@ -208,6 +208,10 @@ like natural language.
 [A] Append (to the end of the line with insert mode)
 [(https://github.com/] "(https://github.com/"
 [Esc] and return to normal mode.
+[p] Paste everything in the buffer. 
+[A] Append (to the end of the line with insert mode)
+[)] ")"
+[Esc] and return to normal mode.
 [j] Go down one line.
 [^] Go to the start of the line.
 [q] End recording.
@@ -221,9 +225,10 @@ Record all following actions to register a. Change the inner word to `-` and
 return to normal mode. Go to the start of the next word. Change surrounding
 single quotes to brackets (without padding). Go to the start of the next word.
 Yank (copy) everything within inner brackets. Append (to the end of the line
-with insert mode) `(https://github.com/` and return to normal mode. Go down one
-line. Go to the start of the line. End recording. For 6 times, run the
-recording in register a.
+with insert mode) `(https://github.com/` and return to normal mode.  Paste
+everything in the buffer.  Append (to the end of the line with insert mode) ")"
+and return to normal mode.  Go down one line. Go to the start of the line. End
+recording. For 6 times, run the recording in register a.
 
 ## From Here
 
