@@ -226,12 +226,11 @@ recording in register a.
 
 ## From Here
 
-Now that you have some familiarity with composing basic commands in Vim, either
-in your head or out loud describe the steps to perform whatever task you need
-to complete and translate each sentence into actions. Much like learning a new
-language, at first you will be reaching to find what words to use but as you
-build your vocabulary the ease with which you can express your thoughts will
-continue to develop. In cases where you feel stuck, reach for a 
-[cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif) 
-or take advantage of the `:help` command to find the command/word you 
-are looking for.
+Now that you have some familiarity with composing basic commands in Vim, when
+trying to complete a task either in your head or out loud describe the steps
+you need to perform and translate each sentence into actions. Much like
+learning a new language, at first you will be reaching to find words to
+use but as you build your vocabulary the ease with which you can express your
+thoughts will continue to develop. In cases where you feel stuck, reach for a
+[cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif) or take advantage of
+the `:help` command to find the command/word you are looking for.
