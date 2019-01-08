@@ -1,4 +1,4 @@
-# Vim Tutorial: Composition <!--- Name in progress -->
+# Vim Tutorial: Command Composition <!--- Name in progress -->
 
 <!---
 Guide Starts with installing a plugin manager.
@@ -26,7 +26,7 @@ plugins, use a plugin manager such as
 
 ### Enabled Options
 
-'''
+```
 " Show Line Numbers on the side 
 set number 
 
@@ -41,23 +41,184 @@ set incsearch
 
 " Bind a single spacebar keystroke to clear search highlighting in normal mode 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-'''
+```
 
 ### Plugins
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'christoomey/vim-titlecase'
-Plug 'christoomey/vim-sort-motion'
-Plug 'godlygeek/tabular'
+- [christoomey/vim-sort-motion](https://github.com/christoomey/vim-sort-motion)
+- [christoomey/vim-titlecase](https://github.com/christoomey/vim-titlecase)
+- [tpope/vim-commentary](https://github.com/tpope/vim-commentary)
+- [tpope/vim-repeat](https://github.com/tpope/vim-repeat)
+- [tpope/vim-surround](https://github.com/tpope/vim-surround)
 
--
--
--
--
 
-<!--- :%s/\s\+$// -->
-<!--- :%s/\t/    /g -->
-<!--- record with q, q to stop, @reg to play, <C-r>reg to insert commands -->
-<!--- 
+## Command Composition
+
+In many text editors and IDEs, actions are discrete steps that are performed as
+necessary by the user. Each action is well defined and performs exactly one task
+on the selected text. As a holdover from their experience with other editors,
+many Vim users will attempt to manipulate text in this series of well defined
+steps (Select the text with visual mode and perform one action). This works well
+for basic tasks however it becomes tedious for many complex ones. For these
+tasks users will often either spend the time performing this tedious process or
+they will abandon the text editor all together and spend time building scripts
+to perform these specific tasks instead.
+
+Much like how Vim uses the modal style instead of the traditional emacs style,
+actions in Vim break away from traditional editting paradigms. In Vim, actions
+are closer to sentences than discrete commands. This style takes a while to get
+used to however it changes the way you think about manipulating text and greatly
+reduces the amount of effort required to make substantial changes.
+
+Actions in Vim can be divided like a sentence into pieces akin to verbs, nouns,
+adjectives, and adverbs. The verb element of an action is just called a verb.
+The equivalent to the adverb in Vim is often just referred to as a modifier and
+changes the type or number of repetions of the verb. Nouns and adjectives
+together make what are referred to in Vim as a text object. A noun by itself is
+instead referred to as a motion. Where text objects define a block the cursor
+is within, motions select everything between the cursor and the next object
+defined by the specified "noun". Refer to the Vim documentation on motions and
+text objects with `:help cursor-motions` or in the 
+[online documentation](vimdoc.sourceforge.net/htmldoc/motion.html).
+
+Similarly to how sentences can be composed into paragraphs, actions in vim can
+be composed together to form more complex actions. These complex actions can
+then be recorded to a register and replayed over a large set of text with little
+to no effort.
+
+## Examples
+
+![reflowp]
+
+```
+[gq] Reflow
+[i] Inner (not effecting surrounding whitespace)
+[p] Paragraph
+```
+
+Reflowing a text block to the set column width can be done with `gqip`. `gq` is
+the verb and `ip` is the text object. 
+
+![reflow3p]
+
+```
+[3] For 3 Times
+[gq] Reflow
+[}] until next paragraph
+```
+
+Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
+`3` is the adverb, `gq` is the verb, and `}` is the motion.
+
+![changew]
+
+```
+[c] Change
+[i] Inner
+[w] Word
+```
+
+This deletes the current word without affecting whitespace and enters insert
+mode to provide replacement text.
+
+![titles]
+
+```
+[gt] Swap to title case for
+[i] Inner
+[s] Sentence
+```
+
+This swaps the case of the entire sentence to title case.
+
+![commentout]
+
+```
+[gc] Comment around
+[a] a (including the delimiters)
+[}] bracketed scope
+```
+
+This creates a comment block around a bracketed block using the comment style of
+the current file's language. This is a very useful when quickly enabling and
+disabling debugging code.
+
+![tab]
+
+```
+[g] Go to
+[g] top of file and
+[=] Reformat indentation
+[G] until the end of the file
+```
+
+This one is a little more complex. `gg` is technically its own action however
+as there is no 'entire file' text object, a motion to the top followed by an
+action that acts until the end is often used. In this case the action is
+reformating the indentation. Similarly, `ggVG` will select the
+entire file in a Visual block.
+
+
+## Breaking Down A Complex Action (Paragraphs)
+
+```
+qaciw-<Esc>wcs']wyi]A(https://github.com/<Esc>pA)<Esc>j^q6@a
+```
+
+This command looks complex and impossible to memorise however very rarely will
+anyone recite a specific action like this. This would instead form naturally
+like a person describing the action. This command converts a list of vim-plug
+plugin entries into a Markdown list of links to the Github pages of each plugin.
+I selected this example to show that with practice Vim command composition
+becomes like a second language as this was a command that I performed while
+creating this tutorial.  Look at the demonstration below and then see how
+similar the description is to the command above.
+
+![plugins]
+
+```
+[q] Record actions to
+[a] register a.
+[c] Change the
+[i] inner
+[w] word
+[-] to "-"
+[Esc] and return to normal mode.
+[w] Go to the start of the next word.
+[c] Change
+[s] surrounding
+['] single quotes to
+[]] brackets (without padding).
+[w] Go to the start of the next word.
+[y] Yank (copy) everything within
+[i] inner
+[]] brackets.
+[A] Append (to the end of the line with insert mode)
+[(https://github.com/] "(https://github.com/"
+[Esc] and return to normal mode.
+[j] Go down one line.
+[^] Go to the start of the line.
+[q] End recording.
+[6] For 6 times,
+[@] run the recording in
+[a] register a.
+```
+Without the line by line it looks like this. 
+
+Record actions to register a. Change the inner word to "-" and return to normal
+mode. Go to the start of the next word. Change surrounding single quotes to brackets
+(without padding). Go to the start of the next word. Yank (copy) everything within inner
+brackets. Append (to the end of the line with insert mode) "(https://github.com/" 
+and return to normal mode. Go down one line. Go to the start of the line. End 
+recording. For 6 times, run the recording in register a.
+
+## From Here
+
+Now that you have some familiarity with composing basic commands in Vim, either
+in your head or out loud describe the steps to perform whatever task you need
+to complete and translate each sentence into actions. Much like learning a new
+language, at first you will be reaching to find what words to use but as you
+build your vocabulary the ease with which you can express your thoughts will
+continue to develop. In cases where you feel stuck, reach for a 
+[cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif) 
+or take advantage of the `:help` command to find the command/word you 
+are looking for.
