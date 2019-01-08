@@ -1,1 +1,1 @@
-[Hello world](ENGL3764/VimTutorial.md)
+[Vim Tutorial: Command Composition](ENGL3764/VimTutorial.md)
