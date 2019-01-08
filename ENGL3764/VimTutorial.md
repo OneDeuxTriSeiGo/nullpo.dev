@@ -131,7 +131,7 @@ mode to provide replacement text.
 
 ```
 [gt] Swap to title case for
-[i] Inner
+[a] an entire (including whitespace)
 [s] Sentence
 ```
 
@@ -143,7 +143,7 @@ This swaps the case of the entire sentence to title case.
 
 ```
 [gc] Comment around
-[a] a (including the delimiters)
+[a] an entire (including the delimiters)
 [}] bracketed scope
 ```
 
@@ -218,7 +218,7 @@ Without the line by line it looks like this.
 Record actions to register a. Change the inner word to "-" and return to normal
 mode. Go to the start of the next word. Change surrounding single quotes to brackets
 (without padding). Go to the start of the next word. Yank (copy) everything within inner
-brackets. Append (to the end of the line with insert mode) "(https://github.com/" 
+brackets. Append (to the end of the line with insert mode) `(https://github.com/` 
 and return to normal mode. Go down one line. Go to the start of the line. End 
 recording. For 6 times, run the recording in register a.
 
