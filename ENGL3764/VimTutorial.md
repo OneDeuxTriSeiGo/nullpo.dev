@@ -214,7 +214,7 @@ like natural language.
 [@] run the recording in
 [a] register a.
 ```
-Without the line by line it looks like this. 
+Without the line by line it looks like the following.
 
 Record all following actions to register a. Change the inner word to `-` and
 return to normal mode. Go to the start of the next word. Change surrounding
