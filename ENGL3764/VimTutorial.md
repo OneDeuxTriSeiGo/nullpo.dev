@@ -98,7 +98,7 @@ the verb and `ip` is the text object.
 [p] Paragraph
 ```
 
-![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
+![reflowp](https://jacoblambda.github.io/ENGL3764/reflowp.svg)
 
 ---
 
@@ -111,7 +111,7 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 [}] until next paragraph
 ```
 
-![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
+![reflow3p](https://jacoblambda.github.io/ENGL3764/reflow3p.svg)
 
 ---
 
@@ -124,7 +124,7 @@ mode to provide replacement text.
 [w] Word
 ```
 
-![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
+![changew](https://jacoblambda.github.io/ENGL3764/changew.svg)
 
 ---
 
@@ -136,7 +136,7 @@ This swaps the case of the entire sentence to title case.
 [s] Sentence
 ```
 
-![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
+![titles](https://jacoblambda.github.io/ENGL3764/titles.svg)
 
 ---
 
@@ -150,7 +150,7 @@ disabling debugging code.
 [}] bracketed scope
 ```
 
-![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
+![commentout](https://jacoblambda.github.io/ENGL3764/commentout.svg)
 
 ---
 
@@ -167,7 +167,7 @@ entire file in a Visual block.
 [G] until the end of the file
 ```
 
-![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
+![tab](https://jacoblambda.github.io/ENGL3764/tab.svg)
 
 ## Breaking Down A Complex Action (Paragraphs)
 
@@ -186,7 +186,7 @@ like a person describing the action. Look at the demonstration and description
 below and observe how with some slight annotation the command above reads 
 like natural language.
 
-![plugins](https://jacoblambda.github.io/jacoblambda/ENGL3764/plugins.svg)
+![plugins](https://jacoblambda.github.io/ENGL3764/plugins.svg)
 
 ```
 [q] Record all following actions to
