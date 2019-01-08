@@ -99,6 +99,8 @@ to no effort.
 Reflowing a text block to the set column width can be done with `gqip`. `gq` is
 the verb and `ip` is the text object. 
 
+---
+
 ![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
 
 ```
@@ -109,6 +111,8 @@ the verb and `ip` is the text object.
 
 Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 `3` is the adverb, `gq` is the verb, and `}` is the motion.
+
+---
 
 ![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
 
@@ -121,6 +125,8 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 This deletes the current word without affecting whitespace and enters insert
 mode to provide replacement text.
 
+---
+
 ![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
 
 ```
@@ -130,6 +136,8 @@ mode to provide replacement text.
 ```
 
 This swaps the case of the entire sentence to title case.
+
+---
 
 ![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
 
@@ -142,6 +150,8 @@ This swaps the case of the entire sentence to title case.
 This creates a comment block around a bracketed block using the comment style of
 the current file's language. This is a very useful when quickly enabling and
 disabling debugging code.
+
+---
 
 ![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
 
