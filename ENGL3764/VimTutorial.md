@@ -88,7 +88,7 @@ to no effort.
 
 ## Examples
 
-![reflowp][https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg]
+![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
 
 ```
 [gq] Reflow
@@ -99,7 +99,7 @@ to no effort.
 Reflowing a text block to the set column width can be done with `gqip`. `gq` is
 the verb and `ip` is the text object. 
 
-![reflow3p][https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg]
+![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
 
 ```
 [3] For 3 Times
@@ -110,7 +110,7 @@ the verb and `ip` is the text object.
 Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 `3` is the adverb, `gq` is the verb, and `}` is the motion.
 
-![changew][https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg]
+![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
 
 ```
 [c] Change
@@ -121,7 +121,7 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 This deletes the current word without affecting whitespace and enters insert
 mode to provide replacement text.
 
-![titles][https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg]
+![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
 
 ```
 [gt] Swap to title case for
@@ -131,7 +131,7 @@ mode to provide replacement text.
 
 This swaps the case of the entire sentence to title case.
 
-![commentout][https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg]
+![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
 
 ```
 [gc] Comment around
@@ -143,7 +143,7 @@ This creates a comment block around a bracketed block using the comment style of
 the current file's language. This is a very useful when quickly enabling and
 disabling debugging code.
 
-![tab][https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg]
+![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
 
 ```
 [g] Go to
@@ -174,7 +174,7 @@ becomes like a second language as this was a command that I performed while
 creating this tutorial.  Look at the demonstration below and then see how
 similar the description is to the command above.
 
-![plugins][https://jacoblambda.github.io/jacoblambda/ENGL3764/plugins.svg]
+![plugins](https://jacoblambda.github.io/jacoblambda/ENGL3764/plugins.svg)
 
 ```
 [q] Record actions to
