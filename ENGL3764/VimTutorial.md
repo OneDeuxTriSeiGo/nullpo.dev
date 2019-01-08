@@ -8,7 +8,8 @@ explain text objects
 
 Vim is an extraordinarily powerful text editor despite its famously difficult
 learning curve. Once you have an understanding of navigation, editing, and basic
-regular expressions however, the editor begins to feel more natural and you can
+[regular expressions](http://vimregex.com/) 
+however, the editor begins to feel more natural and you can
 perform many tasks with ease. To get the most out of Vim however, one must
 master the concept of command composition. Once a user has mastered these
 features they become capable of performing almost any task with the minimal amount
