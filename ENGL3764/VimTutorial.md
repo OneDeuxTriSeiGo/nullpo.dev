@@ -88,7 +88,8 @@ to no effort.
 
 ## Examples
 
-![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
+Reflowing a text block to the set column width can be done with `gqip`. `gq` is
+the verb and `ip` is the text object. 
 
 ```
 [gq] Reflow
@@ -96,12 +97,12 @@ to no effort.
 [p] Paragraph
 ```
 
-Reflowing a text block to the set column width can be done with `gqip`. `gq` is
-the verb and `ip` is the text object. 
+![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
 
 ---
 
-![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
+Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
+`3` is the adverb, `gq` is the verb, and `}` is the motion.
 
 ```
 [3] For 3 Times
@@ -109,12 +110,12 @@ the verb and `ip` is the text object.
 [}] until next paragraph
 ```
 
-Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
-`3` is the adverb, `gq` is the verb, and `}` is the motion.
+![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
 
 ---
 
-![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
+This deletes the current word without affecting whitespace and enters insert
+mode to provide replacement text.
 
 ```
 [c] Change
@@ -122,12 +123,11 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 [w] Word
 ```
 
-This deletes the current word without affecting whitespace and enters insert
-mode to provide replacement text.
+![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
 
 ---
 
-![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
+This swaps the case of the entire sentence to title case.
 
 ```
 [gt] Swap to title case for
@@ -135,11 +135,13 @@ mode to provide replacement text.
 [s] Sentence
 ```
 
-This swaps the case of the entire sentence to title case.
+![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
 
 ---
 
-![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
+This creates a comment block around a bracketed block using the comment style of
+the current file's language. This is a very useful when quickly enabling and
+disabling debugging code.
 
 ```
 [gc] Comment around
@@ -147,13 +149,15 @@ This swaps the case of the entire sentence to title case.
 [}] bracketed scope
 ```
 
-This creates a comment block around a bracketed block using the comment style of
-the current file's language. This is a very useful when quickly enabling and
-disabling debugging code.
+![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
 
 ---
 
-![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
+This one is a little more complex. `gg` is technically its own action however
+as there is no 'entire file' text object, a motion to the top followed by an
+action that acts until the end is often used. In this case the action is
+reformatting the indentation. Similarly, `ggVG` will select the
+entire file in a Visual block.
 
 ```
 [g] Go to
@@ -162,18 +166,9 @@ disabling debugging code.
 [G] until the end of the file
 ```
 
-This one is a little more complex. `gg` is technically its own action however
-as there is no 'entire file' text object, a motion to the top followed by an
-action that acts until the end is often used. In this case the action is
-reformatting the indentation. Similarly, `ggVG` will select the
-entire file in a Visual block.
-
+![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
 
 ## Breaking Down A Complex Action (Paragraphs)
-
-```
-qaciw-<Esc>wcs']wyi]A(https://github.com/<Esc>pA)<Esc>j^q6@a
-```
 
 This command looks complex and impossible to memorise however very rarely will
 anyone recite a specific action like this. This would instead form naturally
@@ -183,6 +178,10 @@ I selected this example to show that with practice Vim command composition
 becomes like a second language as this was a command that I performed while
 creating this tutorial.  Look at the demonstration below and then see how
 similar the description is to the command above.
+
+```
+qaciw-<Esc>wcs']wyi]A(https://github.com/<Esc>pA)<Esc>j^q6@a
+```
 
 ![plugins](https://jacoblambda.github.io/jacoblambda/ENGL3764/plugins.svg)
 
