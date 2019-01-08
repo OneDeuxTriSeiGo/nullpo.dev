@@ -91,20 +91,18 @@ to no effort.
 Reflowing a text block to the set column width can be done with `gqip`. `gq` is
 the verb and `ip` is the text object. 
 
-![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
-
 ```
 [gq] Reflow
 [i] Inner (not effecting surrounding whitespace)
 [p] Paragraph
 ```
 
+![reflowp](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflowp.svg)
+
 ---
 
 Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 `3` is the adverb, `gq` is the verb, and `}` is the motion.
-
-![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
 
 ```
 [3] For 3 Times
@@ -112,12 +110,12 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 [}] until next paragraph
 ```
 
+![reflow3p](https://jacoblambda.github.io/jacoblambda/ENGL3764/reflow3p.svg)
+
 ---
 
 This deletes the current word without affecting whitespace and enters insert
 mode to provide replacement text.
-
-![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
 
 ```
 [c] Change
@@ -125,11 +123,11 @@ mode to provide replacement text.
 [w] Word
 ```
 
+![changew](https://jacoblambda.github.io/jacoblambda/ENGL3764/changew.svg)
+
 ---
 
 This swaps the case of the entire sentence to title case.
-
-![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
 
 ```
 [gt] Swap to title case for
@@ -137,19 +135,21 @@ This swaps the case of the entire sentence to title case.
 [s] Sentence
 ```
 
+![titles](https://jacoblambda.github.io/jacoblambda/ENGL3764/titles.svg)
+
 ---
 
 This creates a comment block around a bracketed block using the comment style of
 the current file's language. This is a very useful when quickly enabling and
 disabling debugging code.
 
-![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
-
 ```
 [gc] Comment around
 [a] a (including the delimiters)
 [}] bracketed scope
 ```
+
+![commentout](https://jacoblambda.github.io/jacoblambda/ENGL3764/commentout.svg)
 
 ---
 
@@ -159,8 +159,6 @@ action that acts until the end is often used. In this case the action is
 reformatting the indentation. Similarly, `ggVG` will select the
 entire file in a Visual block.
 
-![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
-
 ```
 [g] Go to
 [g] top of file and
@@ -168,6 +166,7 @@ entire file in a Visual block.
 [G] until the end of the file
 ```
 
+![tab](https://jacoblambda.github.io/jacoblambda/ENGL3764/tab.svg)
 
 ## Breaking Down A Complex Action (Paragraphs)
 
