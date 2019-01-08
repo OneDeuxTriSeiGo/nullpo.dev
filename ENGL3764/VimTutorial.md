@@ -11,7 +11,7 @@ learning curve. Once you have an understanding of navigation, editing, and basic
 regular expressions however, the editor begins to feel more natural and you can
 perform many tasks with ease. To get the most out of Vim however, one must
 master the concept of command composition. Once a user has mastered these
-features they become capable of performing most any task with the minimal amount
+features they become capable of performing almost any task with the minimal amount
 of motion necessary.
 
 ## Configuration and Plugins
@@ -54,9 +54,9 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 ## Command Composition
 
 In many text editors and IDEs, actions are discrete steps that are performed as
-necessary by the user. Each action is well defined and performs exactly one task
+necessary by the user. Each action is well-defined and performs exactly one task
 on the selected text. As a holdover from their experience with other editors,
-many Vim users will attempt to manipulate text in this series of well defined
+many Vim users will attempt to manipulate text in this series of well-defined
 steps (Select the text with visual mode and perform one action). This works well
 for basic tasks however it becomes tedious for many complex ones. For these
 tasks users will often either spend the time performing this tedious process or
@@ -64,7 +64,7 @@ they will abandon the text editor all together and spend time building scripts
 to perform these specific tasks instead.
 
 Much like how Vim uses the modal style instead of the traditional emacs style,
-actions in Vim break away from traditional editting paradigms. In Vim, actions
+actions in Vim break away from traditional editing paradigms. In Vim, actions
 are closer to sentences than discrete commands. This style takes a while to get
 used to however it changes the way you think about manipulating text and greatly
 reduces the amount of effort required to make substantial changes.
@@ -72,12 +72,13 @@ reduces the amount of effort required to make substantial changes.
 Actions in Vim can be divided like a sentence into pieces akin to verbs, nouns,
 adjectives, and adverbs. The verb element of an action is just called a verb.
 The equivalent to the adverb in Vim is often just referred to as a modifier and
-changes the type or number of repetions of the verb. Nouns and adjectives
+changes the type or number of repetitions of the verb. Nouns and adjectives
 together make what are referred to in Vim as a text object. A noun by itself is
 instead referred to as a motion. Where text objects define a block the cursor
 is within, motions select everything between the cursor and the next object
-defined by the specified "noun". Refer to the Vim documentation on motions and
-text objects with `:help cursor-motions` or in the 
+defined by the specified "noun". For more information on the specific details,
+refer to the Vim documentation on motions and text objects with 
+`:help cursor-motions` or in the 
 [online documentation](vimdoc.sourceforge.net/htmldoc/motion.html).
 
 Similarly to how sentences can be composed into paragraphs, actions in vim can
@@ -87,7 +88,7 @@ to no effort.
 
 ## Examples
 
-![reflowp]
+![reflowp][reflowp]
 
 ```
 [gq] Reflow
@@ -98,7 +99,7 @@ to no effort.
 Reflowing a text block to the set column width can be done with `gqip`. `gq` is
 the verb and `ip` is the text object. 
 
-![reflow3p]
+![reflow3p][reflow3p]
 
 ```
 [3] For 3 Times
@@ -109,7 +110,7 @@ the verb and `ip` is the text object.
 Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 `3` is the adverb, `gq` is the verb, and `}` is the motion.
 
-![changew]
+![changew][changew]
 
 ```
 [c] Change
@@ -120,7 +121,7 @@ Reflowing the following 3 paragraphs can be done with a motion like `3gq}` where
 This deletes the current word without affecting whitespace and enters insert
 mode to provide replacement text.
 
-![titles]
+![titles][titles]
 
 ```
 [gt] Swap to title case for
@@ -130,7 +131,7 @@ mode to provide replacement text.
 
 This swaps the case of the entire sentence to title case.
 
-![commentout]
+![commentout][commentout]
 
 ```
 [gc] Comment around
@@ -142,7 +143,7 @@ This creates a comment block around a bracketed block using the comment style of
 the current file's language. This is a very useful when quickly enabling and
 disabling debugging code.
 
-![tab]
+![tab][tab]
 
 ```
 [g] Go to
@@ -154,7 +155,7 @@ disabling debugging code.
 This one is a little more complex. `gg` is technically its own action however
 as there is no 'entire file' text object, a motion to the top followed by an
 action that acts until the end is often used. In this case the action is
-reformating the indentation. Similarly, `ggVG` will select the
+reformatting the indentation. Similarly, `ggVG` will select the
 entire file in a Visual block.
 
 
@@ -173,7 +174,7 @@ becomes like a second language as this was a command that I performed while
 creating this tutorial.  Look at the demonstration below and then see how
 similar the description is to the command above.
 
-![plugins]
+![plugins][plugins]
 
 ```
 [q] Record actions to
